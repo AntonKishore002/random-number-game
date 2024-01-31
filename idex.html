@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>logIn</title>
+</head>
+<style>body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #fd3300, #edb78e);
+    align-items: center;
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+}
+.container{
+    background-color: rgb(242, 76, 6);
+    border-color: #020202;
+    border-style: double;
+    width: 300px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 10 70 70 rgb(10,20,130);
+}
+label{
+    display: block;
+    margin-bottom: 8px;
+}
+input{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+button{
+    width: 70%;
+    border: none;
+    padding: 5px;
+    background-color: #a04545;
+    color: aliceblue;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 50px;
+
+}
+button:hover{
+    background-color: brown;
+}</style>
+<body>
+    <div class="container">
+        <form id="loginform">
+            <label for="username">username:</label>
+            <input type="text" id="username" name="username" placeholder="enter your username" required>
+
+            <label for="password">password</label>
+            <input type="password" id="password" name="password" placeholder="enter your password" required>
+
+            <button type="button" onclick="login()">login</button>
+        </form>
+    </div>
+    <script>
+    function login() {
+        var username=document.getElementById("username").value;
+        var password=document.getElementById("password").value;
+    
+        if(username==="anton" && password==="ak"){
+            alert("successfulluy logged in");
+            window.location.href = "akx.html";
+        }
+        else{
+            alert("invalid username or password");
+        }
+    }</script>
+</body>
+</html>
